@@ -20,32 +20,13 @@
     },
     {
       "tag": "goodbye",
-      "patterns": [
-        "bye",
-        "goodbye",
-        "see you",
-        "take care",
-        "later"
-      ],
-      "responses": [
-        "Goodbye! Have a great day!",
-        "See you soon!",
-        "Take care!"
-      ]
+      "patterns": ["bye", "goodbye", "see you", "take care", "later"],
+      "responses": ["Goodbye! Have a great day!", "See you soon!", "Take care!"]
     },
     {
       "tag": "thanks",
-      "patterns": [
-        "thanks",
-        "thank you",
-        "appreciate it",
-        "many thanks"
-      ],
-      "responses": [
-        "You're welcome!",
-        "Happy to help!",
-        "Anytime!"
-      ]
+      "patterns": ["thanks", "thank you", "appreciate it", "many thanks"],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
     }
   ],
   "admin_intents": [
@@ -138,9 +119,7 @@
         "what is my attendance",
         "my attendance"
       ],
-      "responses": [
-        "Checking your attendance record..."
-      ]
+      "responses": ["Checking your attendance record..."]
     },
     {
       "tag": "project_allocation",
