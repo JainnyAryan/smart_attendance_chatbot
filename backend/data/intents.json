@@ -1,0 +1,211 @@
+{
+  "greetings": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening",
+        "how are you?",
+        "what's up?",
+        "yo"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hey there! Need any help?",
+        "Hi! How's your day going?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "take care",
+        "later"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you soon!",
+        "Take care!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "appreciate it",
+        "many thanks"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime!"
+      ]
+    }
+  ],
+  "admin_intents": [
+    {
+      "tag": "employee_attendance_summary",
+      "patterns": [
+        "attendance summary of",
+        "attendance summary for",
+        "'s attendance summary",
+        "'s attendance report",
+        "attendance report of",
+        "attendance report for",
+        "attendance overview of",
+        "attendance overview for",
+        "'s attendance overview"
+      ],
+      "responses": [
+        "Fetching the latest attendance summary of {}",
+        "Here is the attendance report for {}."
+      ]
+    },
+    {
+      "tag": "attendance_policy",
+      "patterns": [
+        "attendance policy?",
+        "Explain attendance rules",
+        "How many leaves are allowed?"
+      ],
+      "responses": [
+        "Employees must maintain at least 75% attendance.",
+        "The company allows 12 paid leaves per year."
+      ]
+    },
+    {
+      "tag": "project_allocation",
+      "patterns": [
+        "Assign employees to a project",
+        "Allocate a project",
+        "Assign team members"
+      ],
+      "responses": [
+        "Please provide project details and employee preferences.",
+        "Project allocation is being processed."
+      ]
+    },
+    {
+      "tag": "project_suggestions",
+      "patterns": [
+        "Who is the best fit for this project?",
+        "Suggest employees for this project",
+        "Find suitable project members"
+      ],
+      "responses": [
+        "Fetching employee recommendations based on skills, experience, and past performance...",
+        "Here are the most suitable employees for this project."
+      ]
+    },
+    {
+      "tag": "promotion_policy",
+      "patterns": [
+        "Explain the promotion criteria",
+        "How do promotions work?",
+        "What are the promotion guidelines?"
+      ],
+      "responses": [
+        "Promotions are based on performance, experience, and company policies.",
+        "Employees with 3+ years of experience and strong performance are eligible for promotion."
+      ]
+    },
+    {
+      "tag": "meeting_schedule",
+      "patterns": [
+        "Schedule a meeting",
+        "Book a meeting room",
+        "Fix a meeting with HR"
+      ],
+      "responses": [
+        "Please specify the time and participants.",
+        "Meeting room is being booked for you."
+      ]
+    }
+  ],
+  "employee_intents": [
+    {
+      "tag": "attendance_check",
+      "patterns": [
+        "Did I check in today?",
+        "Am I marked present today?",
+        "Check my attendance",
+        "what is my attendance",
+        "my attendance"
+      ],
+      "responses": [
+        "Checking your attendance record..."
+      ]
+    },
+    {
+      "tag": "project_allocation",
+      "patterns": [
+        "Which project am I assigned to?",
+        "My current project details",
+        "Check my project allocation"
+      ],
+      "responses": [
+        "Fetching your project allocation...",
+        "You are currently assigned to the AI Development project."
+      ]
+    },
+    {
+      "tag": "check_in",
+      "patterns": ["Check in for work", "Clock in", "Start my shift"],
+      "responses": [
+        "Your check-in has been recorded.",
+        "You have successfully checked in."
+      ]
+    },
+    {
+      "tag": "check_out",
+      "patterns": ["Check out", "Clock out", "End my shift"],
+      "responses": [
+        "Your check-out has been recorded.",
+        "You have successfully checked out."
+      ]
+    },
+    {
+      "tag": "working_hours",
+      "patterns": [
+        "What are my working hours?",
+        "Tell me my shift timings",
+        "When does my shift start?"
+      ],
+      "responses": [
+        "Your working hours are from 9 AM to 5 PM.",
+        "You are scheduled to work from 8 AM to 4 PM."
+      ]
+    },
+    {
+      "tag": "work_from_home",
+      "patterns": [
+        "Can I work from home?",
+        "WFH policy",
+        "How many WFH days are allowed?"
+      ],
+      "responses": [
+        "WFH is allowed for up to 3 days a week.",
+        "Please get manager approval for WFH."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "My email is not working",
+        "IT issue",
+        "Reset my password",
+        "Laptop is slow"
+      ],
+      "responses": [
+        "Please raise a ticket with IT support.",
+        "Try restarting your system and check again."
+      ]
+    }
+  ]
+}
