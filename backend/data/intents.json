@@ -31,6 +31,19 @@
   ],
   "admin_intents": [
     {
+      "tag": "employee_details",
+      "patterns": [
+        "Get details of",
+        "'s details",
+        "'s profile",
+        "'s information"
+      ],
+      "responses": [
+        "Fetching details for {}...",
+        "Here is the profile information for {}."
+      ]
+    },
+    {
       "tag": "employee_attendance_summary",
       "patterns": [
         "attendance summary of",
@@ -60,6 +73,16 @@
         "The company allows 12 paid leaves per year."
       ]
     },
+    {
+      "tag": "all_projects",
+      "patterns": [
+        "List all projects",
+        "Show me all projects",
+        "What are the projects?"
+      ],
+      "responses": ["Here are all the projects...", "All the projects..."]
+    },
+
     {
       "tag": "project_allocation",
       "patterns": [
