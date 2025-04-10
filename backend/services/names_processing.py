@@ -9,19 +9,19 @@ engine = create_engine(DATABASE_URL)
 
 
 def get_names():
-    df1 = pd.read_csv("backend/data/femalenames.csv")
-    df2 = pd.read_csv("backend/data/malenames.csv")
+    # df1 = pd.read_csv("backend/data/femalenames.csv")
+    # df2 = pd.read_csv("backend/data/malenames.csv")
 
-    names: list[str] = list(
-        set(df1["name"].dropna().tolist() + df2["name"].dropna().tolist()))
+    # names: list[str] = list(
+    #     set(df1["name"].dropna().tolist() + df2["name"].dropna().tolist()))
     processed_names = []
-    for name in names:
-        parts = name.split()
-        if len(parts) > 1:
-            for part in parts:
-                if part != "" and part.isalpha():
-                    processed_names.append(part.lower())
-        processed_names.append(name.lower())
+    # for name in names:
+    #     parts = name.split()
+    #     if len(parts) > 1:
+    #         for part in parts:
+    #             if part != "" and part.isalpha():
+    #                 processed_names.append(part.lower())
+    #     processed_names.append(name.lower())
 
     employee_names = get_employees_names()
     processed_names.extend(employee_names)
@@ -37,3 +37,14 @@ def get_employees_names():
             names.add(fullname)
         print(names)
         return list(names)
+
+
+def get_project_codes():
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT code from projects")).fetchall()
+        codes = set()
+        for tup in result:
+            code = tup[0].lower()
+            codes.add(code)
+        print(codes)
+        return list(codes)

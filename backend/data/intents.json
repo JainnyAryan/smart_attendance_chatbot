@@ -13,9 +13,9 @@
         "yo"
       ],
       "responses": [
-        "Hello! How can I assist you today?",
-        "Hey there! Need any help?",
-        "Hi! How's your day going?"
+        "Hello {}! How can I assist you today?",
+        "Hey {}! Need any help?",
+        "Hi {}! How can I help you?"
       ]
     },
     {
@@ -36,11 +36,15 @@
         "Get details of",
         "'s details",
         "'s profile",
-        "'s information"
+        "'s information",
+        "employee details of",
+        "employee details for",
+        "'s employee details",
+        "employee details"
       ],
       "responses": [
         "Fetching details for {}...",
-        "Here is the profile information for {}."
+        "Here is the employee information for {}."
       ]
     },
     {
@@ -54,14 +58,22 @@
         "attendance report for",
         "attendance overview of",
         "attendance overview for",
-        "'s attendance overview"
+        "'s attendance overview",
+        "need attendance summary of",
+        "need attendance report of",
+        "need attendance overview of",
+        "attendance summary",
+        "attendance report",
+        "attendance overview"
       ],
       "responses": [
         "Fetching the latest attendance summary of {}",
         "Here is the attendance report for {}."
       ]
     },
+
     {
+      "REMAINING": true,
       "tag": "attendance_policy",
       "patterns": [
         "attendance policy?",
@@ -82,59 +94,50 @@
       ],
       "responses": ["Here are all the projects...", "All the projects..."]
     },
-
     {
-      "tag": "project_allocation",
+      "tag": "project_details",
       "patterns": [
-        "Assign employees to a project",
-        "Allocate a project",
-        "Assign team members"
+        "Get details of project",
+        "Show me project details",
+        "Project information",
+        "Project overview"
       ],
       "responses": [
-        "Please provide project details and employee preferences.",
-        "Project allocation is being processed."
+        "Fetching details for the project {}...",
+        "Here is the information for the project {}."
       ]
     },
     {
-      "tag": "project_suggestions",
+      "tag": "current_allocations_of_project",
       "patterns": [
-        "Who is the best fit for this project?",
-        "Suggest employees for this project",
+        "Get details of employees in project",
+        "Show me employees in project",
+        "List employees in project",
+        "current allocations",
+        "employees in project",
+        "project employees"
+      ],
+      "responses": [
+        "Fetching employee allocations for the project {}...",
+        "Here are the employees currently allocated to the project {}."
+      ]
+    },
+    {
+      "tag": "project_allocation_suggestions",
+      "patterns": [
+        "Who is the best fit for project",
+        "Suggest employees for project",
         "Find suitable project members"
       ],
       "responses": [
         "Fetching employee recommendations based on skills, experience, and past performance...",
         "Here are the most suitable employees for this project."
       ]
-    },
-    {
-      "tag": "promotion_policy",
-      "patterns": [
-        "Explain the promotion criteria",
-        "How do promotions work?",
-        "What are the promotion guidelines?"
-      ],
-      "responses": [
-        "Promotions are based on performance, experience, and company policies.",
-        "Employees with 3+ years of experience and strong performance are eligible for promotion."
-      ]
-    },
-    {
-      "tag": "meeting_schedule",
-      "patterns": [
-        "Schedule a meeting",
-        "Book a meeting room",
-        "Fix a meeting with HR"
-      ],
-      "responses": [
-        "Please specify the time and participants.",
-        "Meeting room is being booked for you."
-      ]
     }
   ],
   "employee_intents": [
     {
-      "tag": "attendance_check",
+      "tag": "my_attendance_check",
       "patterns": [
         "Did I check in today?",
         "Am I marked present today?",
@@ -142,34 +145,18 @@
         "what is my attendance",
         "my attendance"
       ],
-      "responses": ["Checking your attendance record..."]
+      "responses": ["Checking your attendance record for today..."]
     },
     {
-      "tag": "project_allocation",
+      "tag": "my_project_allocations",
       "patterns": [
-        "Which project am I assigned to?",
-        "My current project details",
-        "Check my project allocation"
+        "Which projects am I assigned to?",
+        "My current projects details",
+        "Check my project allocations"
       ],
       "responses": [
         "Fetching your project allocation...",
-        "You are currently assigned to the AI Development project."
-      ]
-    },
-    {
-      "tag": "check_in",
-      "patterns": ["Check in for work", "Clock in", "Start my shift"],
-      "responses": [
-        "Your check-in has been recorded.",
-        "You have successfully checked in."
-      ]
-    },
-    {
-      "tag": "check_out",
-      "patterns": ["Check out", "Clock out", "End my shift"],
-      "responses": [
-        "Your check-out has been recorded.",
-        "You have successfully checked out."
+        "You are currently assigned to..."
       ]
     },
     {
@@ -208,6 +195,19 @@
         "Please raise a ticket with IT support.",
         "Try restarting your system and check again."
       ]
+    },
+    {
+      "tag": "promotion_policy",
+      "patterns": [
+        "Explain the promotion criteria",
+        "How do promotions work?",
+        "What are the promotion guidelines?"
+      ],
+      "responses": [
+        "Promotions are based on performance, experience, and company policies.",
+        "Employees with 3+ years of experience and strong performance are eligible for promotion."
+      ]
     }
   ]
 }
+

@@ -7,7 +7,7 @@ from rapidfuzz import fuzz  # Import fuzzy matching
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from backend.services.names_processing import get_names
+from backend.services.names_processing import get_names, get_project_codes
 
 
 # Load spaCy model
@@ -15,9 +15,14 @@ nlp = spacy.load("en_core_web_lg")
 
 # Add Indian name entity recognition
 ruler = nlp.add_pipe("entity_ruler", before="ner")
-indian_names = get_names()
-patterns = [{"label": "PERSON", "pattern": name} for name in indian_names]
-ruler.add_patterns(patterns)
+employee_names = get_names()
+project_codes = get_project_codes()
+employee_patterns = [{"label": "EMPLOYEE_NAME", "pattern": name}
+                     for name in employee_names]
+project_patterns = [{"label": "PROJECT_CODE", "pattern": code}
+                    for code in project_codes]
+ruler.add_patterns(employee_patterns)
+ruler.add_patterns(project_patterns)
 
 # Load intents JSON file
 with open("backend/data/intents.json", "r") as file:
