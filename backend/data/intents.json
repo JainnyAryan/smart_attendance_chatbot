@@ -152,11 +152,28 @@
       "patterns": [
         "Which projects am I assigned to?",
         "My current projects details",
-        "Check my project allocations"
+        "Check my project allocations",
+        "projects i am in",
+        "projects allocated to me"
       ],
       "responses": [
         "Fetching your project allocation...",
         "You are currently assigned to..."
+      ]
+    },
+    {
+      "tag": "my_current_score",
+      "patterns": [
+        "What is my current score?",
+        "Check my performance score",
+        "My performance rating",
+        "my current score",
+        "my performance score",
+        "my performance rating"
+      ],
+      "responses": [
+        "Your current performance score is...",
+        "You have a performance rating of..."
       ]
     },
     {
@@ -210,4 +227,3 @@
     }
   ]
 }
-
