@@ -177,6 +177,42 @@
       ]
     },
     {
+      "tag": "my_score_breakdown",
+      "patterns": [
+        "How is my score calculated?",
+        "Check my score breakdown",
+        "My performance evaluation details",
+        "my score breakdown",
+        "my performance evaluation",
+        "my score details",
+        "my performance details"
+      ],
+      "responses": [
+        "Your score is based on...",
+        "Here is the breakdown of your performance evaluation..."
+      ]
+    },
+    {
+      "tag": "what_if_score_prediction",
+      "patterns": [
+        "How can I improve my score?",
+        "What if I reduce transitions?",
+        "Predict my score if I work more",
+        "Show my projected score",
+        "If I stay active more, will my score improve?",
+        "Simulate my score",
+        "I want to increase my score",
+        "How much score can I get?",
+        "What happens if I complete on time?",
+        "What will my score be if I change my performance?"
+      ],
+      "responses": [
+        "Let's run a What-If simulation to see how your performance affects your score.",
+        "Sure! You can now simulate changes in your performance and see predicted score improvements.",
+        "Try adjusting active time, on-hold time, and transitions to see how your score changes!"
+      ]
+    },
+    {
       "tag": "working_hours",
       "patterns": [
         "What are my working hours?",
