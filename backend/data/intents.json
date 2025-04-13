@@ -27,6 +27,20 @@
       "tag": "thanks",
       "patterns": ["thanks", "thank you", "appreciate it", "many thanks"],
       "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
+    },
+    {
+      "tag": "features",
+      "patterns": [
+        "What features do you have",
+        "What can you do",
+        "What can you do for me",
+        "Tell me your features",
+        "What are your capabilities",
+        "What are you capable of",
+        "What can you assist with",
+        "What can you help with"
+      ],
+      "responses": ["I can help you with...", "I can assist with..."]
     }
   ],
   "admin_intents": [
